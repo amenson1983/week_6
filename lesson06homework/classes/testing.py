@@ -14,6 +14,7 @@
 #b) списки студентов для каждого факультета и курса;
 #c) список студентов, родившихся после заданного года;
 #d) список учебной группы средний бал выше 4.5 .
+from lesson06homework.classes.group_class import Group
 from lesson06homework.classes.student_class import Student
 
 if __name__ == '__main__':
@@ -21,5 +22,8 @@ if __name__ == '__main__':
     print(student1.__str__())
     print(student1.__repr__())
     student1.show()
+    group1 = Group()
+    group1.add(student1)
+    print(group1)
 
 
