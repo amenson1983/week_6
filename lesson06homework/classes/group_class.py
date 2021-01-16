@@ -6,3 +6,4 @@ class Group:
 
     def __str__(self):
         return f'{self.__students}'
+# тут будут операции с листом и вычислениями по группе

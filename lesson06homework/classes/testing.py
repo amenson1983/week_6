@@ -19,11 +19,13 @@ from lesson06homework.classes.student_class import Student
 
 if __name__ == '__main__':
     student1 = Student('12345678', 'Turchyn Andriy', '16','05', '1983', 'fl.4, 1, Zamkova str, Zhytomir', '0989922947', '5')
+    student2 = Student('87654321', 'Turchya Natali', '10','08', '1982', 'fl.4, 1, Zamkova str, Zhytomir', '0989922947', '5')
     print(student1.__str__())
     print(student1.__repr__())
     student1.show()
     group1 = Group()
     group1.add(student1)
+    group1.add(student2)
     print(group1)
 
 
