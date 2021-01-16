@@ -26,6 +26,7 @@ if __name__ == '__main__':
     group1 = Group()
     group1.add(student1)
     group1.add(student2)
-    print(group1)
+    x = group1.get_students()
+    print(x)
 
 

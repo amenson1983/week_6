@@ -69,7 +69,7 @@ class Student:
     def __str__(self):
         return f" {self.get_id()}, {self.get_fio()}, {self.get_marks()}, {self.get_phone()}, {self.get_adress()}, {self.get_birthday()}, {self.get_birthmonth()}, {self.get_birthyear()}"
     def __repr__(self):
-        return f"Student: {self.get_id()}, {self.get_fio()}, {self.get_marks()}, {self.get_phone()}, {self.get_adress()}, , {self.get_birthday()}, {self.get_birthmonth()}, {self.get_birthyear()}"
+        return f" {self.get_id()}, {self.get_fio()}, {self.get_marks()}, {self.get_phone()}, {self.get_adress()}, , {self.get_birthday()}, {self.get_birthmonth()}, {self.get_birthyear()}"
     def show(self):
         print(self.get_id())
         print(self.get_fio())
