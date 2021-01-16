@@ -44,9 +44,19 @@ class Student:
             str_err = "ID is not in 8 digit format"
             print(str_err)
             raise StudentException(str_err)
-    def get_marks:
-    def get_phone:
-    def get_adress:
-    def get_birthdate:
-    def get_fio:
-    def get_id:
+    def get_marks(self):
+        return self.__marks
+    def get_phone(self):
+        return self.__phone
+    def get_adress(self):
+        return self.__adress
+    def get_birthdate(self):
+        return self.__birthdate
+    def get_fio(self):
+        return self.__fio
+    def get_id(self):
+        return self.__id
+    def __str__(self):
+        return f" {self.get_id()}, {self.get_fio()}, {self.get_marks()}, {self.get_phone()}, {self.get_adress()}, {self.get_birthdate()}"
+    def __repr__(self):
+        return f"Student { {self.get_id()}, {self.get_fio()}, self.get_marks()}, {self.get_phone()}, {self.get_adress()}, {self.get_birthdate()}"

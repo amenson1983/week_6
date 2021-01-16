@@ -14,3 +14,15 @@
 #b) списки студентов для каждого факультета и курса;
 #c) список студентов, родившихся после заданного года;
 #d) список учебной группы средний бал выше 4.5 .
+from lesson06homework.classes.student_class import Student
+
+if __name__ == '__main__':
+    student1 = Student('12345678', 'Turchyn Andriy', '16.05.1983', 'fl.4, 1, Zamkova str, Zhytomir', '0989922947', '5')
+    print(student1.__str__())
+    print(student1.get_id())
+    print(student1.get_fio())
+    print(student1.get_birthdate())
+    print(student1.get_adress())
+    print(student1.get_phone())
+    print(student1.get_marks())
+
