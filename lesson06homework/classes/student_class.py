@@ -4,11 +4,13 @@ from lesson06homework.classes.exceptions_class import StudentException
 
 
 class Student:
-    def __init__(self, id = None, fio = None, birthdate = None, adress = None, phone = None, marks = None):
+    def __init__(self, id = None, fio = None, birthday = None, birthmonth = None, birthyear = None, adress = None, phone = None, marks = None):
+        self.__birthyear = birthyear
+        self.__birthmonth = birthmonth
         self.__marks = marks
         self.__phone = phone
         self.__adress = adress
-        self.__birthdate = birthdate
+        self.__birthday = birthday
         self.__fio = fio
         self.__id = id
     def set_marks(self, value):
@@ -31,8 +33,12 @@ class Student:
             raise StudentException(str_err)
     def set_adress(self, adress):
         self.__adress = adress
-    def set_birthdate(self,birthdate):
-        self.__birthdate = birthdate
+    def set_birthmonth(self,birthmonth):
+        self.__birthmonth = birthmonth
+    def set_birthyear(self, birthyear):
+        self.__birthyear = birthyear
+    def set_birthday(self, birthday):
+        self.__birthday = birthday
     def set_fio(self, fio):
         self.__fio = fio
     def set_id(self, id):
@@ -50,13 +56,26 @@ class Student:
         return self.__phone
     def get_adress(self):
         return self.__adress
-    def get_birthdate(self):
-        return self.__birthdate
+    def get_birthday(self):
+        return self.__birthday
+    def get_birthmonth(self):
+        return self.__birthmonth
+    def get_birthyear(self):
+        return self.__birthyear
     def get_fio(self):
         return self.__fio
     def get_id(self):
         return self.__id
     def __str__(self):
-        return f" {self.get_id()}, {self.get_fio()}, {self.get_marks()}, {self.get_phone()}, {self.get_adress()}, {self.get_birthdate()}"
+        return f" {self.get_id()}, {self.get_fio()}, {self.get_marks()}, {self.get_phone()}, {self.get_adress()}, {self.get_birthday()}, {self.get_birthmonth()}, {self.get_birthyear()}"
     def __repr__(self):
-        return f"Student { {self.get_id()}, {self.get_fio()}, self.get_marks()}, {self.get_phone()}, {self.get_adress()}, {self.get_birthdate()}"
+        return f"Student: {self.get_id()}, {self.get_fio()}, {self.get_marks()}, {self.get_phone()}, {self.get_adress()}, , {self.get_birthday()}, {self.get_birthmonth()}, {self.get_birthyear()}"
+    def show(self):
+        print(self.get_id())
+        print(self.get_fio())
+        print(self.get_birthday())
+        print(self.get_birthmonth())
+        print(self.get_birthyear())
+        print(self.get_adress())
+        print(self.get_phone())
+        print(self.get_marks())
