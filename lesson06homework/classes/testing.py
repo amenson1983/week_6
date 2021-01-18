@@ -14,20 +14,20 @@
 #b) списки студентов для каждого факультета и курса;
 #c) список студентов, родившихся после заданного года;
 #d) список учебной группы средний бал выше 4.5 .
+from lesson06homework.classes.fakultet_class import Facultet
 from lesson06homework.classes.group_class import Group
 from lesson06homework.classes.student_class import Student
 
 if __name__ == '__main__':
-    student1 = Student('12345678', 'Turchyn Andriy', '16','05', '1983', 'fl.4, 1, Zamkova str, Zhytomir', '0989922947', '5')
-    student2 = Student('87654321', 'Turchya Natali', '10','08', '1982', 'fl.4, 1, Zamkova str, Zhytomir', '0989922947', '5')
-
-    print(student1.__str__())
-    print(student1.__repr__())
-    student1.show()
+    student1 = Student('123', 'Turchyn Andrey', 16,5,1983, '1, Zamkova str, Zhytomir, 4, fl', '+380989922947', 5.0)
+    student2 = Student('321', 'Turchyna Natali', 10, 8, 1982, '1, Zamkova str, Zhytomir, 4 fl', '+380989922947',4.9)
     group1 = Group()
-    group1.add(student1)
-    group1.add(student2)
-    x = group1.get_students()
-    print(x)
+    group2 = Group()
+    group2.add_to_group2(student1)
+    group2.add_to_group2(student2)
+    group2.get_2()
+    print(group2.__str__())
+
+
 
 

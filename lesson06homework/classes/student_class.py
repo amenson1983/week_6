@@ -1,10 +1,12 @@
 import logging
 
 from lesson06homework.classes.exceptions_class import StudentException
+from lesson06homework.classes.group_class import Group
 
 
-class Student:
-    def __init__(self, id = None, fio = None, birthday = None, birthmonth = None, birthyear = None, adress = None, phone = None, marks = None):
+class Student():
+    def __init__(self, id=None, fio=None, birthday=None, birthmonth=None, birthyear=None, adress=None, phone=None,
+                 marks=None):
         self.__birthyear = birthyear
         self.__birthmonth = birthmonth
         self.__marks = marks
@@ -41,6 +43,7 @@ class Student:
         self.__birthday = birthday
     def set_fio(self, fio):
         self.__fio = fio
+
     def set_id(self, id):
         if id > 0 and len(id) == 8:
             self.__id = id
@@ -66,10 +69,12 @@ class Student:
         return self.__fio
     def get_id(self):
         return self.__id
+
+
     def __str__(self):
         return f" {self.get_id()}, {self.get_fio()}, {self.get_marks()}, {self.get_phone()}, {self.get_adress()}, {self.get_birthday()}, {self.get_birthmonth()}, {self.get_birthyear()}"
     def __repr__(self):
-        return f" {self.get_id()}, {self.get_fio()}, {self.get_marks()}, {self.get_phone()}, {self.get_adress()}, , {self.get_birthday()}, {self.get_birthmonth()}, {self.get_birthyear()}"
+        return f" {self.get_id()}, {self.get_fio()}, {self.get_marks()}, {self.get_phone()}, {self.get_adress()}, {self.get_birthday()}, {self.get_birthmonth()}, {self.get_birthyear()}"
     def show(self):
         print(self.get_id())
         print(self.get_fio())
@@ -79,3 +84,10 @@ class Student:
         print(self.get_adress())
         print(self.get_phone())
         print(self.get_marks())
+
+
+
+
+
+
+
