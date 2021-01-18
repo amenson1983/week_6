@@ -8,11 +8,11 @@ class Group():
         self.__2 = group2
 
     def add_to_group1(self, student):
-        self.__1.append(student.get_fio())
+        self.__1.append(student.get_fio()) # здесь сформировать список (добавить признаки) с полями из задания, для дальнейшей обработки
         self.__1.append(student.get_marks())
 
     def add_to_group2(self, student):
-        self.__2.append(student.get_fio())
+        self.__2.append(student.get_fio()) # здесь сформировать список (добавить признаки) с полями из задания, для дальнейшей обработки
         self.__2.append(student.get_marks())
 
     def get_1(self):
