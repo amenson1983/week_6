@@ -24,9 +24,13 @@ if __name__ == '__main__':
     group1 = Group()
     group2 = Group()
     group2.add_to_group2(student1)
-    group2.add_to_group2(student2)
-    group2.get_2()
-    print(group2.__str__())
+    group1.add_to_group1(student2)
+    x = list(group2.get_2())
+    y = list(group1.get_1())
+    z = x.count('Turchyn Andrey')
+    print(z, x)
+
+
 
 
 
