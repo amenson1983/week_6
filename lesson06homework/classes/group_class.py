@@ -9,11 +9,11 @@ class Group():
 
     def add_to_group1(self, student):
         self.__1.append(student.get_fio()) # здесь сформировать список (добавить признаки) с полями из задания, для дальнейшей обработки
-        self.__1.append(student.get_marks())
+        self.__1.append(student.get_birthyear())
 
     def add_to_group2(self, student):
         self.__2.append(student.get_fio()) # здесь сформировать список (добавить признаки) с полями из задания, для дальнейшей обработки
-        self.__2.append(student.get_marks())
+        self.__2.append(student.get_birthyear())
 
     def get_1(self):
         return self.__1

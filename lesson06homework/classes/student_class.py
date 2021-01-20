@@ -5,25 +5,15 @@ from lesson06homework.classes.group_class import Group
 
 
 class Student():
-    def __init__(self, id=None, fio=None, birthday=None, birthmonth=None, birthyear=None, adress=None, phone=None,
-                 marks=None):
+    def __init__(self, id=None, fio=None, birthday=None, birthmonth=None, birthyear=None, adress=None, phone=None):
         self.__birthyear = birthyear
         self.__birthmonth = birthmonth
-        self.__marks = marks
         self.__phone = phone
         self.__adress = adress
         self.__birthday = birthday
         self.__fio = fio
         self.__id = id
-    def set_marks(self, value):
-        if value > 0 and value < 5:
-            self.__marks = value
-            logging.info("Marks input" + str(value))
-        else:
-            self.__marks = None
-            str_err = "Error price, value < 0 or bigger than 5"
-            print(str_err)
-            raise StudentException(str_err)
+
     def set_phone(self,phone):
         if phone > 0 and len(phone) == 13:
             self.__marks = phone
@@ -53,8 +43,7 @@ class Student():
             str_err = "ID is not in 8 digit format"
             print(str_err)
             raise StudentException(str_err)
-    def get_marks(self):
-        return self.__marks
+
     def get_phone(self):
         return self.__phone
     def get_adress(self):
@@ -72,9 +61,9 @@ class Student():
 
 
     def __str__(self):
-        return f" {self.get_id()}, {self.get_fio()}, {self.get_marks()}, {self.get_phone()}, {self.get_adress()}, {self.get_birthday()}, {self.get_birthmonth()}, {self.get_birthyear()}"
+        return f" {self.get_id()}, {self.get_fio()}, {self.get_phone()}, {self.get_adress()}, {self.get_birthday()}, {self.get_birthmonth()}, {self.get_birthyear()}"
     def __repr__(self):
-        return f" {self.get_id()}, {self.get_fio()}, {self.get_marks()}, {self.get_phone()}, {self.get_adress()}, {self.get_birthday()}, {self.get_birthmonth()}, {self.get_birthyear()}"
+        return f" {self.get_id()}, {self.get_fio()}, {self.get_phone()}, {self.get_adress()}, {self.get_birthday()}, {self.get_birthmonth()}, {self.get_birthyear()}"
     def show(self):
         print(self.get_id())
         print(self.get_fio())
@@ -83,7 +72,7 @@ class Student():
         print(self.get_birthyear())
         print(self.get_adress())
         print(self.get_phone())
-        print(self.get_marks())
+
 
 
 

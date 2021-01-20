@@ -6,11 +6,11 @@ class Facultet():
           self.__economy = economy
           self.__it = it
 
-      def add_to_economy(self, group):
-          self.__economy.append(group)
+      def add_to_economy(self, student):
+          self.__economy.append(student.get_fio())
 
-      def add_to_it(self, group):
-          self.__it.append(group)
+      def add_to_it(self, student):
+          self.__it.append(student.get_fio())
 
       def get_economy(self):
           return self.__economy
