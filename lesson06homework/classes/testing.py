@@ -20,7 +20,25 @@ from lesson06homework.classes.marks_class import Marks
 from lesson06homework.classes.student_class import Student
 
 if __name__ == '__main__':
-    student1 = Student('123', 'Turchyn Andrey', 16,5,1983, '1, Zamkova str, Zhytomir, 4, fl', '+380989922947')
+    student1 = Student()
+    id = int(input('Input id (8 digits): '))
+    fio_ = input('Input FIO: ')
+    birth_day = int(input('Input the day of birth: '))
+    birth_month = int(input('Input the month of birth: '))
+    birth_year = int(input('Input the year of birth: '))
+    adress = input('Input adress: ')
+    phone = int(input('Input phone (13 digits): '))
+    student1.set_id(id)
+    student1.set_fio(fio_)
+    student1.set_birthday(birth_day)
+    student1.set_birthmonth(birth_month)
+    student1.set_birthyear(birth_year)
+    student1.set_adress(adress)
+    student1.set_phone(phone)
+
+
+
+
     student2 = Student('321', 'Turchyna Natali', 10, 8, 1982, '1, Zamkova str, Zhytomir, 4 fl', '+380989922947')
     group1 = Group()
     group2 = Group()
