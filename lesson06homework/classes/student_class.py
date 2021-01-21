@@ -92,10 +92,7 @@ class Student():
     def get_group(self):
         return self.__group
 
-    def get_older_than_year(self, year, list=[]):
-        if self.get_birthyear() > year:
-            list.append(self.get_fio())
-        return list
+
 
     def get_list_from_file_in_one_row_CSV(filename="students.csv"):
         list_stud = []

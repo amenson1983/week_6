@@ -29,7 +29,10 @@ if __name__ == '__main__':
     year_indicator = int(input('Put the year to find elder students: '))
     for i in range(0,len(years)):
         if int(years[i]) < year_indicator:
-            print(list_of_students[i])
+            print(list_of_students[i][1])
+
+
+
 
 
 
