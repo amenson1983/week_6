@@ -24,6 +24,7 @@ if __name__ == '__main__':
     list_of_students = student.get_list_from_file_in_one_row_CSV()
     years = []
     faculties = []
+    course = []
     for student in list_of_students:
         years.append(student[4])
     print(years)
@@ -38,11 +39,23 @@ if __name__ == '__main__':
     print(faculties)
     faculty = input('Put the faculty:')
     for i in range(0,len(faculties)):
-        if faculties[i] == 'it':
+        if faculties[i].lower == 'it':
             print('IT: ', list_of_students[i][1])
-        elif faculties[i] == 'Management':
+        elif faculties[i].lower() == 'management':
             print('Management: ', list_of_students[i][1])
 
-
-
-
+    for student in list_of_students:
+        course.append(student[8])
+    print(course)
+    for i in range(0,len(course)):
+        if int(course[i]) == 1:
+            print('1-st course: ', list_of_students[i][1])
+        elif int(course[i]) == 2:
+            print('2-nd course: ', list_of_students[i][1])
+        elif int(course[i]) == 3:
+            print('3-rd course: ', list_of_students[i][1])
+        elif int(course[i]) == 4:
+            print('4-th course: ', list_of_students[i][1])
+        elif int(course[i]) == 5:
+            print('5-th course: ', list_of_students[i][1])
+        else: print('Not found')
