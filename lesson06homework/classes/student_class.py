@@ -71,6 +71,7 @@ class Student():
     def get_id(self):
         return self.__id
 
+
     def get_list_from_file_in_one_row_CSV(filename="students.csv"):
         list_stud = []
         with open("students.csv", "r") as myfile:
