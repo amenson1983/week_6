@@ -23,6 +23,7 @@ if __name__ == '__main__':
     student = Student()
     list_of_students = student.get_list_from_file_in_one_row_CSV()
     years = []
+    faculties = []
     for student in list_of_students:
         years.append(student[4])
     print(years)
@@ -32,7 +33,15 @@ if __name__ == '__main__':
             print(list_of_students[i][1])
 
 
-
+    for student in list_of_students:
+        faculties.append(student[7])
+    print(faculties)
+    faculty = input('Put the faculty:')
+    for i in range(0,len(faculties)):
+        if faculties[i] == 'it':
+            print('IT: ', list_of_students[i][1])
+        elif faculties[i] == 'Management':
+            print('Management: ', list_of_students[i][1])
 
 
 
