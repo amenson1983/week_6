@@ -1,5 +1,6 @@
 from lesson06homework.classes.course_class import Course
 from lesson06homework.classes.group_class import Group
+from lesson06homework.classes.marks_class import Marks
 from lesson06homework.classes.student_class import Student
 
 if __name__ == '__main__':
@@ -19,9 +20,10 @@ if __name__ == '__main__':
 
  course = Course()
  course.add_to_course_1(student1)
- course.add_to_course_1(student2)
+ course.add_to_course_2(student2)
  course.add_to_course_3(student3)
  print('List of 1 course students: ', course.get_course_1(),'\nList of 2 course students: ',  course.get_course_2(),'\nList of 3 course students: ',  course.get_course_3())
+
 
 
 

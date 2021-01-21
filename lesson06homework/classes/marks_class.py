@@ -22,58 +22,20 @@ class Marks:
     def get_markslist(self):
         return self.__markslist
 
-    def set_german(self):
-        value = int(input('Input mark for German:'))
-        if value > 0 and value <= 5:
+    def set_german(self,value):
             self.__german = value
-            logging.info("Marks input" + str(value))
-        else:
-            self.__german = None
-            str_err = "Error price, value < 0 or bigger than 5"
-            print(str_err)
-            raise StudentException(str_err)
 
-    def set_english(self):
-        value = int(input('Input mark for English:'))
-        if value > 0 and value <= 5:
+    def set_english(self,value):
             self.__english = value
-            logging.info("Marks input" + str(value))
-        else:
-            self.__english = None
-            str_err = "Error price, value < 0 or bigger than 5"
-            print(str_err)
-            raise StudentException(str_err)
-    def set_management(self):
-        value = int(input('Input mark for Management:'))
-        if value > 0 and value <= 5:
-            self.__management = value
-            logging.info("Marks input" + str(value))
-        else:
-            self.__management = None
-            str_err = "Error price, value < 0 or bigger than 5"
-            print(str_err)
-            raise StudentException(str_err)
 
-    def set_programming(self):
-        value = int(input('Input mark for Programming:'))
-        if value > 0 and value <= 5:
+    def set_management(self,value):
+            self.__management = value
+
+    def set_programming(self,value):
             self.__programming = value
-            logging.info("Marks input" + str(value))
-        else:
-            self.__programming = None
-            str_err = "Error price, value < 0 or bigger than 5"
-            print(str_err)
-            raise StudentException(str_err)
-    def set_math(self):
-        value = int(input('Input mark for Math:'))
-        if value > 0 and value <= 5:
+    def set_math(self,value):
             self.__math = value
-            logging.info("Marks input" + str(value))
-        else:
-            self.__math = None
-            str_err = "Error price, value < 0 or bigger than 5"
-            print(str_err)
-            raise StudentException(str_err)
+
 
     def get_math(self):
         return self.__math

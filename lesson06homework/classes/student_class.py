@@ -6,7 +6,10 @@ from lesson06homework.classes.group_class import Group
 
 
 class Student():
-    def __init__(self, id=None, fio=None, birthday=None, birthmonth=None, birthyear=None, adress=None, phone=None):
+    def __init__(self, id=None, fio=None, birthday=None, birthmonth=None, birthyear=None, adress=None, phone=None, faculty=None, course=None, group=None):
+        self.__group = group
+        self.__course = course
+        self.__faculty = faculty
         self.__birthyear = birthyear
         self.__birthmonth = birthmonth
         self.__phone = phone
@@ -40,6 +43,15 @@ class Student():
     def set_fio(self, fio):
         self.__fio = fio
 
+    def set_faculty(self, faculty):
+        self.__faculty = faculty
+
+    def set_course(self, course):
+        self.__course = course
+
+    def set_group(self, group):
+        self.__group = group
+
     def set_id(self, id):
         if id > 0:
             self.__id = id
@@ -71,6 +83,19 @@ class Student():
     def get_id(self):
         return self.__id
 
+    def get_faculty(self):
+        return self.__faculty
+
+    def get_course(self):
+        return self.__course
+
+    def get_group(self):
+        return self.__group
+
+    def get_older_than_year(self, year, list=[]):
+        if self.get_birthyear() > year:
+            list.append(self.get_fio())
+        return list
 
     def get_list_from_file_in_one_row_CSV(filename="students.csv"):
         list_stud = []
