@@ -171,4 +171,22 @@ class Student1():
         elif self.get_faculty() == 'it' and int(self.get_course()) == 5:
             print('Course 5 student`s FIO: ', self.get_fio())
 
+    def print_management_course_stud(self):
+        if self.get_faculty() == 'management' and int(self.get_course()) == 1:
+            print('Course 1 student`s FIO: ', self.get_fio())
+        elif self.get_faculty() == 'management' and int(self.get_course()) == 2:
+            print('Course 2 student`s FIO: ', self.get_fio())
+        elif self.get_faculty() == 'management' and int(self.get_course()) == 3:
+            print('Course 3 student`s FIO: ', self.get_fio())
+        elif self.get_faculty() == 'management' and int(self.get_course()) == 4:
+            print('Course 4 student`s FIO: ', self.get_fio())
+        elif self.get_faculty() == 'management' and int(self.get_course()) == 5:
+            print('Course 5 student`s FIO: ', self.get_fio())
 
+    def print_birthyear_students(self,tar_year):
+        if int(self.get_birthyear()) >= tar_year:
+            print('Student`s FIO: ', self.get_fio())
+
+    def group_list_aver_mark(self):
+        if self.aver_mark() > 4.5:
+            print('Higher than 4.5 mark student`s FIO: ', self.get_fio())
