@@ -1,6 +1,5 @@
 from lesson06homework.classes.course_class import Course
 from lesson06homework.classes.group_class import Group
-from lesson06homework.classes.marks_class import Marks
 from lesson06homework.classes.student_class import Student
 
 if __name__ == '__main__':

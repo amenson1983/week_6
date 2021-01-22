@@ -14,9 +14,6 @@
 #b) списки студентов для каждого факультета и курса;
 #c) список студентов, родившихся после заданного года;
 #d) список учебной группы средний бал выше 4.5 .
-from lesson06homework.classes.fakultet_class import Facultet
-from lesson06homework.classes.group_class import Group
-from lesson06homework.classes.marks_class import Marks
 from lesson06homework.classes.student_class import Student
 
 if __name__ == '__main__':
@@ -27,7 +24,6 @@ if __name__ == '__main__':
     course = []
     for student in list_of_students:
         years.append(student[4])
-    print(years)
     year_indicator = int(input('Put the year to find elder students: '))
     for i in range(0,len(years)):
         if int(years[i]) < year_indicator:
@@ -36,7 +32,6 @@ if __name__ == '__main__':
 
     for student in list_of_students:
         faculties.append(student[7])
-    print(faculties)
     faculty = input('Put the faculty:')
     for i in range(0,len(faculties)):
         if faculties[i].lower == 'it':
@@ -46,7 +41,6 @@ if __name__ == '__main__':
 
     for student in list_of_students:
         course.append(student[8])
-    print(course)
     for i in range(0,len(course)):
         if int(course[i]) == 1:
             print('1-st course: ', list_of_students[i][1])

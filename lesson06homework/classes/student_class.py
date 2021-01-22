@@ -116,3 +116,6 @@ class Student():
         print(self.get_birthyear())
         print(self.get_adress())
         print(self.get_phone())
+        print(self.get_faculty())
+        print(self.get_course())
+        print(self.get_group())
